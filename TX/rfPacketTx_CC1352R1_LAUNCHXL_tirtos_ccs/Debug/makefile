@@ -2,10 +2,10 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-CG_TOOL_ROOT := /Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS
+CG_TOOL_ROOT := /Volumes/Storage/shared/anetreba/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS
 
-GEN_OPTS__FLAG := --cmd_file="/Users/pro13/Desktop/anetreba/Transfer/TX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt" 
-GEN_CMDS__FLAG := -l"/Users/pro13/Desktop/anetreba/Transfer/TX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/linker.cmd" 
+GEN_OPTS__FLAG := --cmd_file="/Volumes/Storage/shared/anetreba/IOT/Transfer/RX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/compiler.opt" 
+GEN_CMDS__FLAG := -l"/Volumes/Storage/shared/anetreba/IOT/Transfer/RX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/linker.cmd" 
 
 ORDERED_OBJS += \
 "./main_tirtos.obj" \
@@ -141,20 +141,20 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@$(MAKE) --no-print-directory -Onone "rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.out"
 
 dependents:
-	-cd /Users/pro13/Desktop/anetreba/Transfer/TX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug && $(MAKE) clean all
+	-cd /Volumes/Storage/shared/anetreba/IOT/Transfer/RX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug && $(MAKE) all
 
 # Tool invocations
-rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS) /Users/pro13/Desktop/anetreba/Transfer/TX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/tirtos_builds_cc13x2_cc26x2_release_ccs.lib
+rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS) /Volumes/Storage/shared/anetreba/IOT/Transfer/RX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/tirtos_builds_cc13x2_cc26x2_release_ccs.lib
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"/Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=DeviceFamily_CC13X2_CC26X2 -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.map" -i"/Users/pro13/ti/simplelink_cc13x2_26x2_sdk_4_40_04_04/source" -i"/Users/pro13/ti/simplelink_cc13x2_26x2_sdk_4_40_04_04/kernel/tirtos/packages" -i"/Users/pro13/Desktop/anetreba/Transfer/TX/rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs/Debug/syscfg" -i"/Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs_linkInfo.xml" --rom_model -o "rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.out" $(ORDERED_OBJS)
+	"/Volumes/Storage/shared/anetreba/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=DeviceFamily_CC13X2_CC26X2 -g --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on -z -m"rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.map" -i"/Volumes/Storage/shared/anetreba/ti/ccs1020/simplelink_cc13x2_26x2_sdk_4_40_04_04/source" -i"/Volumes/Storage/shared/anetreba/ti/ccs1020/simplelink_cc13x2_26x2_sdk_4_40_04_04/kernel/tirtos/packages" -i"/Volumes/Storage/shared/anetreba/IOT/Transfer/TX/rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs/Debug/syscfg" -i"/Volumes/Storage/shared/anetreba/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/lib" --diag_wrap=off --display_error_number --warn_sections --xml_link_info="rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs_linkInfo.xml" --rom_model -o "rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: Arm Hex Utility'
-	"/Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armhex" --diag_wrap=off -o "rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.hex" $(EXE_OUTPUTS__QUOTED)
+	"/Volumes/Storage/shared/anetreba/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armhex" --diag_wrap=off -o "rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
@@ -169,7 +169,7 @@ clean:
 
 .PHONY: all clean dependents
 .SECONDARY:
-/Users/pro13/Desktop/anetreba/Transfer/TX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/tirtos_builds_cc13x2_cc26x2_release_ccs.lib:
+/Volumes/Storage/shared/anetreba/IOT/Transfer/RX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/tirtos_builds_cc13x2_cc26x2_release_ccs.lib:
 
 -include ../makefile.targets
 

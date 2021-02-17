@@ -13,6 +13,6 @@
 	<ignoreDefaultDeviceSettings value="true"/>
 	<ignoreDefaultCCSSettings value="true"/>
 	<templateProperties value="id=rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.projectspec.rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs,buildProfile=release,isHybrid=true"/>
-	<origin value="/Users/pro13/ti/simplelink_cc13x2_26x2_sdk_4_40_04_04/examples/rtos/CC1352R1_LAUNCHXL/drivers/rfPacketTx/tirtos/ccs/rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.projectspec"/>
+	<origin value="/Volumes/Storage/shared/anetreba/ti/ccs1020/simplelink_cc13x2_26x2_sdk_4_40_04_04/examples/rtos/CC1352R1_LAUNCHXL/drivers/rfPacketTx/tirtos/ccs/rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.projectspec"/>
 	<filesToOpen value=""/>
 </projectOptions>

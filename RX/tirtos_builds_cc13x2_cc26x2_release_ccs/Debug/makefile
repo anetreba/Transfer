@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-CG_TOOL_ROOT := /Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS
+CG_TOOL_ROOT := /Volumes/Storage/shared/anetreba/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS
 
 GEN_OPTS__FLAG := --cmd_file="configPkg/compiler.opt" 
 GEN_CMDS__FLAG := "configPkg/linker.cmd" 
@@ -129,11 +129,11 @@ all:
 main-build: tirtos_builds_cc13x2_cc26x2_release_ccs.lib
 
 # Tool invocations
-tirtos_builds_cc13x2_cc26x2_release_ccs.lib: $(OBJS)
+tirtos_builds_cc13x2_cc26x2_release_ccs.lib: $(OBJS) $(OBJ_SRCS)
 ifneq ($(strip $(ORDERED_OBJS)),)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Archiver'
-	"/Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armar" r "tirtos_builds_cc13x2_cc26x2_release_ccs.lib" $(ORDERED_OBJS)
+	"/Volumes/Storage/shared/anetreba/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS/bin/armar" r "tirtos_builds_cc13x2_cc26x2_release_ccs.lib" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 endif

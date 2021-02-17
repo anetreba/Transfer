@@ -4,7 +4,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.CC1352R1F3.ccxml.Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0" value="${build_artifact:rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.CC1352R1F3.ccxml.Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0" value="rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.CC1352R1F3.ccxml.Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0" value="/Users/pro13/Desktop/anetreba/Transfer/TX/rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs/Debug/rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.CC1352R1F3.ccxml.Texas Instruments XDS110 USB Debug Probe/Cortex_M4_0" value="/Volumes/Storage/shared/anetreba/IOT/Transfer/TX/rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs/Debug/rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/rfPacketTx_CC1352R1_LAUNCHXL_tirtos_ccs"/>
 </listAttribute>

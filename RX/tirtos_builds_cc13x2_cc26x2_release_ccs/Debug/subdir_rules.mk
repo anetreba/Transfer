@@ -9,7 +9,7 @@ build-1745043089:
 build-1745043089-inproc: ../release.cfg
 	@echo 'Building file: "$<"'
 	@echo 'Invoking: XDCtools'
-	"/Applications/ti/ccs1020/xdctools_3_62_00_08_core/xs" --xdcpath="/Users/pro13/ti/simplelink_cc13x2_26x2_sdk_4_40_04_04/source;/Users/pro13/ti/simplelink_cc13x2_26x2_sdk_4_40_04_04/kernel/tirtos/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.simplelink:CC13X2_CC26X2 -r release -c "/Applications/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS" --compileOptions " -DDeviceFamily_CC13X2_CC26X2 " "$<"
+	"/Volumes/Storage/shared/anetreba/ti/ccs1020/xdctools_3_62_00_08_core/xs" --xdcpath="/Volumes/Storage/shared/anetreba/ti/ccs1020/simplelink_cc13x2_26x2_sdk_4_40_04_04/source;/Volumes/Storage/shared/anetreba/ti/ccs1020/simplelink_cc13x2_26x2_sdk_4_40_04_04/kernel/tirtos/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.simplelink:CC13X2_CC26X2 -r release -c "/Volumes/Storage/shared/anetreba/ti/ccs1020/ccs/tools/compiler/ti-cgt-arm_20.2.2.LTS" --compileOptions " -DDeviceFamily_CC13X2_CC26X2 " "$<"
 	@echo 'Finished building: "$<"'
 	@echo ' '
 

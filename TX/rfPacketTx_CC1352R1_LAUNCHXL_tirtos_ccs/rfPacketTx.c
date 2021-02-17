@@ -111,15 +111,20 @@ void *mainThread(void *arg0)
     /* Set the frequency */
     RF_postCmd(rfHandle, (RF_Op*)&RF_cmdFs, RF_PriorityNormal, NULL, 0);
 
+    char serial_num[] = "L410094ZDragon says HI <3\r\n";
+
     while(1)
     {
         /* Create packet with incrementing sequence number and random payload */
         packet[0] = (uint8_t)(seqNumber >> 8);
         packet[1] = (uint8_t)(seqNumber++);
         uint8_t i;
-        for (i = 2; i < PAYLOAD_LENGTH; i++)
-        {
-            packet[i] = rand();
+//        for (i = 2; i < PAYLOAD_LENGTH; i++)
+//        {
+//            packet[i] = rand();
+//        }
+        for (i = 0; i < 27; i++) {
+            packet[i + 2] = serial_num[i];
         }
 
         /* Send packet */

@@ -9,11 +9,11 @@
  */
 
 
--l"/Users/pro13/Desktop/anetreba/Transfer/TX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/package/cfg/release_pem4f.oem4f"
--l"/Users/pro13/Desktop/anetreba/Transfer/TX/tirtos_builds_cc13x2_cc26x2_release_ccs/src/sysbios/rom_sysbios.aem4f"
--l"/Users/pro13/ti/simplelink_cc13x2_26x2_sdk_4_40_04_04/kernel/tirtos/packages/ti/targets/arm/rtsarm/lib/boot.aem4f"
--l"/Users/pro13/ti/simplelink_cc13x2_26x2_sdk_4_40_04_04/kernel/tirtos/packages/ti/targets/arm/rtsarm/lib/auto_init.aem4f"
--l"/Applications/ti/ccs1020/xdctools_3_62_00_08_core/packages/xdc/rov/runtime/lib/xdc.rov.runtime.aem4f"
+-l"/Volumes/Storage/shared/anetreba/IOT/Transfer/RX/tirtos_builds_cc13x2_cc26x2_release_ccs/Debug/configPkg/package/cfg/release_pem4f.oem4f"
+-l"/Volumes/Storage/shared/anetreba/IOT/Transfer/RX/tirtos_builds_cc13x2_cc26x2_release_ccs/src/sysbios/rom_sysbios.aem4f"
+-l"/Volumes/Storage/shared/anetreba/ti/ccs1020/simplelink_cc13x2_26x2_sdk_4_40_04_04/kernel/tirtos/packages/ti/targets/arm/rtsarm/lib/boot.aem4f"
+-l"/Volumes/Storage/shared/anetreba/ti/ccs1020/simplelink_cc13x2_26x2_sdk_4_40_04_04/kernel/tirtos/packages/ti/targets/arm/rtsarm/lib/auto_init.aem4f"
+-l"/Volumes/Storage/shared/anetreba/ti/ccs1020/xdctools_3_62_00_08_core/packages/xdc/rov/runtime/lib/xdc.rov.runtime.aem4f"
 
 --retain="*(xdc.meta)"
 

@@ -33,10 +33,18 @@
 /***** Includes *****/
 /* Standard C Libraries */
 #include <stdlib.h>
+#include <stdio.h>
 
 /* TI Drivers */
 #include <ti/drivers/rf/RF.h>
 #include <ti/drivers/PIN.h>
+#include <ti/drivers/UART.h>
+#include <ti/drivers/GPIO.h>
+
+//#include <ti/display/DisplayUart.h>
+//#include <ti/display/Display.h>
+//#include <ti/display/DisplayExt.h>
+
 
 /* Driverlib Header files */
 #include DeviceFamily_constructPath(driverlib/rf_prop_mailbox.h)
@@ -64,13 +72,16 @@
 /***** Prototypes *****/
 static void callback(RF_Handle h, RF_CmdHandle ch, RF_EventMask e);
 
+
+
+
 /***** Variable declarations *****/
 static RF_Object rfObject;
 static RF_Handle rfHandle;
 
-/* Pin driver handle */
+///* Pin driver handle */
 static PIN_Handle ledPinHandle;
-static PIN_State ledPinState;
+//static PIN_State ledPinState;
 
 /* Buffer which contains all Data Entries for receiving data.
  * Pragmas are needed to make sure this buffer is 4 byte aligned (requirement from the RF Core) */
@@ -115,19 +126,69 @@ PIN_Config pinTable[] =
 	PIN_TERMINATE
 };
 
+/***** UART *****/
+//
+static UART_Handle uart;
+static UART_Params uartParams;
+
+
 /***** Function definitions *****/
 
 void *mainThread(void *arg0)
 {
+
     RF_Params rfParams;
     RF_Params_init(&rfParams);
+    GPIO_init();
+
+
+    /***** UART *****/
+//
+//    static UART_Handle uart;
+//    static UART_Params uartParams;
+
+   // UART_Handle uart;
+  //   UART_Params uartParams;
+
+    const char  echoPrompt[] = "\rStart receiving:\r\n";
+
+
+    GPIO_write(CONFIG_GPIO_RLED, CONFIG_GPIO_LED_OFF);
+
+
+    UART_init();
+
+    /* Create a UART with data processing off. */
+     UART_Params_init(&uartParams);
+     uartParams.writeDataMode = UART_DATA_BINARY;
+     uartParams.readDataMode = UART_DATA_BINARY;
+     uartParams.readReturnMode = UART_RETURN_FULL;
+     uartParams.baudRate = 115200;
+
+     uart = UART_open(CONFIG_UART_0, &uartParams);
+
+     if (uart == NULL) {
+         /* UART_open() failed */
+         while (1);
+     }
+
+     UART_write(uart, echoPrompt, sizeof(echoPrompt));
+//    UART_Params_init(&uartParams);
+
+
+//    uart = UART_open(CONFIG_UART_0, &uartParams);
+//    if (uart == NULL) {
+//        while (1);
+//    }
 
     /* Open LED pins */
-    ledPinHandle = PIN_open(&ledPinState, pinTable);
-    if (ledPinHandle == NULL)
-    {
-        while(1);
-    }
+//    ledPinHandle = PIN_open(&ledPinState, pinTable);
+//    if (ledPinHandle == NULL)
+//    {
+//        while(1);
+//    }
+
+
 
     if( RFQueue_defineQueue(&dataQueue,
                             rxDataEntryBuffer,
@@ -161,10 +222,14 @@ void *mainThread(void *arg0)
     /* Set the frequency */
     RF_postCmd(rfHandle, (RF_Op*)&RF_cmdFs, RF_PriorityNormal, NULL, 0);
 
+
     /* Enter RX mode and stay forever in RX */
     RF_EventMask terminationReason = RF_runCmd(rfHandle, (RF_Op*)&RF_cmdPropRx,
                                                RF_PriorityNormal, &callback,
                                                RF_EventRxEntryDone);
+
+
+        /* Loop forever echoing */
 
     switch(terminationReason)
     {
@@ -265,6 +330,14 @@ void callback(RF_Handle h, RF_CmdHandle ch, RF_EventMask e)
 
         /* Copy the payload + the status byte to the packet variable */
         memcpy(packet, packetDataPointer, (packetLength + 1));
+
+        if (memcmp(packet + 2, "L410094Z", 8) == 0) {
+            UART_write(uart, packet + 10, sizeof(packet) - 10);
+
+        }
+//        UART_write(uart, "\r\n", 2);
+
+        GPIO_toggle(CONFIG_GPIO_RLED);
 
         RFQueue_nextEntry();
     }
